@@ -18,15 +18,13 @@ class LoginForm extends Component {
   }
   // 监听用户名和密码两个 input 值的变化
   handleChange (e) {
-    let that = this
     const target = e.target
     if (['react', 'redux', 'mobx'].includes(target.name)) {
       this.setState({
         checkbox: {
-          ...that.checkbox,
+          ...this.state.checkbox,
           [target.name]: target.checked
         }
-        // [this.checkbox[target.name]]: target.checked
       })
       return
     }

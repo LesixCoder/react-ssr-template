@@ -15,8 +15,9 @@ class PostList extends Component {
     this.state = {
       posts: []
     }
-    this.timer = null
-    this.handleVote = this.handleVote.bind(this)
+    this.timer = null;
+    this.handleVote = this.handleVote.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
   componentDidMount () {
     this.timer = setTimeout(() => {
@@ -25,9 +26,12 @@ class PostList extends Component {
       })
     }, 500)
   }
+
   componentWillUnmount () {
     if (this.timer) clearTimeout(this.timer)
   }
+
+  // 处理点赞逻辑
   handleVote (id) {
     let posts = this.state.posts.map(item => {
       if (item.id === id) item.vote++
@@ -35,18 +39,32 @@ class PostList extends Component {
     })
     this.setState({ posts })
   }
+
+  // 保存帖子
+  handleSave (post) {
+    // 根据post的id，过滤出当前要更新的post
+    let posts = this.state.posts.map(item => {
+      if (item.id === post.id) item = post
+      return item;
+    })
+    this.setState({
+      posts
+    })
+  }
+
   render () {
     return (
       <div className='container'>
         <Form />
-        帖子列表：
+        <h2>帖子列表</h2>
         <ul>
           {
             this.state.posts.map(item =>
               <PostItem
                 post={item}
-                onVote={this.handleVote}
                 key={item.id}
+                onVote={this.handleVote}
+                onSave={this.handleSave}
               ></PostItem>
             )
           }
