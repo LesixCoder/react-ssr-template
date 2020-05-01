@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PostItem from './PostItem'
 import "./PostList.css";
 import Form from './Form'
+import FormInput from './FormInput'
 
 const data = [
   { id: 1, title: "大家一起来讨论React吧", author: "张三", date: "2017-09-01 10:00", vote: 0 },
@@ -56,6 +57,7 @@ class PostList extends Component {
     return (
       <div className='container'>
         <Form />
+        <FormInput />
         <h2>帖子列表</h2>
         <ul>
           {
