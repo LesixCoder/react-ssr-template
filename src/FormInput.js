@@ -17,7 +17,7 @@ class LoginForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           title:
-          <input type="text" ref="{input => this.input = input}" />
+          <input type="text" ref="{input => this.input = input}" defaultValue="liusixin" />
         </label>
 
         <input type="submit" value="Submit" />
