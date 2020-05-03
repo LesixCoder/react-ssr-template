@@ -5,9 +5,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 // import PostList from "./PostList";
 // import Render from "./Render";
-import Error from "./Error";
+// import Error from "./Error";
+import Portals from './Portals'
 
-ReactDOM.render(<Error />, document.getElementById("root"));
+ReactDOM.render(<Portals />, document.getElementById("root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
