@@ -4,9 +4,10 @@ import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import PostList from "./PostList";
-import Render from "./render";
+// import Render from "./Render";
+import Error from "./Error";
 
-ReactDOM.render(<Render />, document.getElementById("root"));
+ReactDOM.render(<Error />, document.getElementById("root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
