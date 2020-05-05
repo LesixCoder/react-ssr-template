@@ -6,9 +6,11 @@ import * as serviceWorker from './serviceWorker';
 // import PostList from "./PostList";
 // import Render from "./Render";
 // import Error from "./Error";
-import Portals from './Portals'
+// import Portals from './Portals'
+// import HOC from './HOC'
+import HocWithRef from './HocWithRef'
 
-ReactDOM.render(<Portals />, document.getElementById("root"));
+ReactDOM.render(<HocWithRef />, document.getElementById("root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
