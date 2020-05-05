@@ -9,10 +9,10 @@ import * as serviceWorker from './serviceWorker';
 // import Portals from './Portals'
 // import HOC from './HOC'
 // import HocWithRef from './HocWithRef'
-import HocWithControlledState from './HocWithControlledState'
+// import HocWithControlledState from './HocWithControlledState'
+import HocWithStyle from './HocWithStyle'
 
-
-ReactDOM.render(<HocWithControlledState />, document.getElementById("root"));
+ReactDOM.render(<HocWithStyle />, document.getElementById("root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
