@@ -1,3 +1,6 @@
+/**
+ * 高阶组件：操纵 props
+ */
 import React, { Component } from 'react'
 
 function withPersistentData (WrappedComponent) {

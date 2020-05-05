@@ -8,9 +8,11 @@ import * as serviceWorker from './serviceWorker';
 // import Error from "./Error";
 // import Portals from './Portals'
 // import HOC from './HOC'
-import HocWithRef from './HocWithRef'
+// import HocWithRef from './HocWithRef'
+import HocWithControlledState from './HocWithControlledState'
 
-ReactDOM.render(<HocWithRef />, document.getElementById("root"));
+
+ReactDOM.render(<HocWithControlledState />, document.getElementById("root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>

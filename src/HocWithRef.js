@@ -1,3 +1,7 @@
+/**
+ * 高阶组件：通过Ref访问组件实例
+ * 当高阶组件封装的复用逻辑需要被包装组件的方法或属性的协同支持时，这种用法就有了用武之地
+ */
 import React, { Component } from 'react'
 
 function withRef (WrappedComponent) {
