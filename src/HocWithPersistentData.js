@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react'
 
-function withPersistentData = (key) => (WrappedComponent) => {
+const withPersistentData = key => WrappedComponent => {
   return class extends Component {
     componentWillMount () {
       let data = localStorage.getItem(key)
@@ -22,6 +22,6 @@ class MyComponent extends Component {
   }
 }
 
-const MyComponentWithPersistentData = withPersistentData(MyComponent, 'data')
+const MyComponentWithPersistentData = withPersistentData('data')(MyComponent)
 
 export default MyComponentWithPersistentData

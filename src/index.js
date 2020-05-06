@@ -7,12 +7,14 @@ import * as serviceWorker from './serviceWorker';
 // import Render from "./Render";
 // import Error from "./Error";
 // import Portals from './Portals'
-import HocWithPersistentData from './HocWithPersistentData'
+// import HocWithPersistentData from './HocWithPersistentData'
 // import HocWithRef from './HocWithRef'
 // import HocWithControlledState from './HocWithControlledState'
 // import HocWithStyle from './HocWithStyle'
+import HocWithExtend from './HocWithExtend'
 
-ReactDOM.render(<HocWithPersistentData />, document.getElementById("root"));
+
+ReactDOM.render(<HocWithExtend />, document.getElementById("root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
