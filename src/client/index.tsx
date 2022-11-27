@@ -1,12 +1,17 @@
 import { hydrateRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, matchRoutes } from 'react-router-dom';
 import App from './App';
 import router from '@/router';
+import RootContextProvider from '@/shared/provider';
 
 const Clinet = () => {
+    let initialData = JSON.parse((document.getElementById('__InitData__') as any).value);
+    //查找路由
     return (
         <BrowserRouter>
-            <App routeList={router} />
+            <RootContextProvider initialData={initialData}>
+                <App routeList={router} />
+            </RootContextProvider>
         </BrowserRouter>
     );
 };

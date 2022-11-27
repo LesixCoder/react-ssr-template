@@ -10,7 +10,6 @@ specifiers:
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
   '@types/react-helmet': ^6.1.5
-  '@types/react-router-dom': ^5.0.1
   '@typescript-eslint/eslint-plugin': ^5.30.6
   '@typescript-eslint/parser': ^5.30.6
   axios: ^0.27.2
@@ -27,7 +26,7 @@ specifiers:
   react-dom: ^18.2.0
   react-router: ^5.0.1
   react-router-config: ^5.0.1
-  react-router-dom: ^6.3.0
+  react-router-dom: ^6.4.3
   ts-loader: ^9.3.1
   ts-node: ^10.9.1
   typescript: ^4.7.4
@@ -56,7 +55,6 @@ devDependencies:
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
   '@types/react-helmet': 6.1.5
-  '@types/react-router-dom': 5.3.3
   '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
   '@typescript-eslint/parser': 5.44.0_hsf322ms6xhhd4b5ne6lb74y4a
   babel-loader: 8.3.0_webpack@5.75.0
@@ -1481,10 +1479,6 @@ packages:
       '@types/node': 18.11.9
     dev: false
 
-  /@types/history/4.7.11:
-    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
-    dev: true
-
   /@types/http-assert/1.5.3:
     resolution: {integrity: sha512-FyAOrDuQmBi8/or3ns4rwPno7/9tJTijVW6aQQjK02+kOQ8zmoNg2XJtAuQhvQcy1ASJq38wirX5//9J1EqoUA==}
 
@@ -1569,21 +1563,6 @@ packages:
   /@types/react-helmet/6.1.5:
     resolution: {integrity: sha512-/ICuy7OHZxR0YCAZLNg9r7I9aijWUWvxaPR6uTuyxe8tAj5RL4Sw1+R6NhXUtOsarkGYPmaHdBDvuXh2DIN/uA==}
     dependencies:
-      '@types/react': 18.0.25
-    dev: true
-
-  /@types/react-router-dom/5.3.3:
-    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
-    dependencies:
-      '@types/history': 4.7.11
-      '@types/react': 18.0.25
-      '@types/react-router': 5.1.19
-    dev: true
-
-  /@types/react-router/5.1.19:
-    resolution: {integrity: sha512-Fv/5kb2STAEMT3wHzdKQK2z8xKq38EDIGVrutYLmQVVLe+4orDFquU52hQrULnEHinMKv9FSA6lf9+uNT1ITtA==}
-    dependencies:
-      '@types/history': 4.7.11
       '@types/react': 18.0.25
     dev: true
 
