@@ -12,6 +12,6 @@ export default class Index extends React.Component {
     }
 
     render() {
-        return <h1 onClick={this.handlerClick}>click here!</h1>;
+        return <h1 onClick={this.handlerClick}>列表页</h1>;
     }
 }

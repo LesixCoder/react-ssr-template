@@ -4,9 +4,10 @@ import childProcess from 'child_process';
 import path from 'path';
 // const { koaBody } = require('koa-body');
 import React from 'react';
-//引入index 组件
-import { renderToString } from 'react-dom/server';
-import Index from '../pages/index';
+import { StaticRouter } from 'react-router-dom/server';
+import { renderToPipeableStream, renderToString } from 'react-dom/server';
+import App from '@/client/App';
+import router from '@/router';
 
 const app = new Koa();
 
@@ -15,7 +16,14 @@ const app = new Koa();
 app.use(koaStatic(path.resolve(process.cwd(), 'client_build')));
 
 app.use((ctx, next) => {
-    const html = renderToString(<Index />);
+    const path = ctx.request.path;
+
+    //渲染组件为 html 字符串
+    const html = renderToString(
+        <StaticRouter location={path}>
+            <App routeList={router}></App>
+        </StaticRouter>
+    );
     ctx.body = `<!DOCTYPE html>
 <html lang="en">
 <head>
